@@ -1,0 +1,226 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+//自サイト用の専用配色
+$my-color1: #BEF3E2;
+$my-color2: #FFEE94;
+$my-color3: #FFAC84;
+
+
+/*================================================
+ *  一般・共通設定
+ ================================================*/
+
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  padding: 250px 0px 0px 0px;
+  color: white;
+  overflow-x: hidden;   //横スクロール禁止
+  background: $my-color2 image-url("bg_img.jpg") fixed  0 0;
+}
+
+#contents {
+  width:100%;
+  margin:0 auto;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;                 // 字色
+  text-align: center;             // 中央寄せ
+  line-height: 1.5;               // 行間
+  margin-bottom: 30px;            // マージン
+}
+
+h1 {
+  font-size: calc(250% + 0.5vw);  // 文字サイズ（レスポンシブ）
+  font-weight: bold;               // 字の太さ
+  letter-spacing: 1.5px;          // 字間隔
+}
+
+h2 {
+  font-size: calc(150% + 0.5vw);   // 文字サイズ（レスポンシブ）
+  font-weight: bold;               // 字の太さ
+  letter-spacing: 1px;             // 字間隔
+}
+
+p {
+  color: black;                  // 字色
+  font-size: calc(85% + 0.5vw);    // 文字サイズ（レスポンシブ）
+  line-height: 2.0;                // 行間
+}
+
+
+/*================================================
+ *  スティッキーヘッダー
+ ================================================*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  transition: .5s ease-in-out;
+}
+
+/* スクロール時にヘッダーの縦サイズを縮める */
+.header-animation {
+  height: 8%;
+}
+
+/* ロゴ */
+.logo {
+  position: absolute;     // 絶対位置
+  bottom: -15%;           // 下に固定
+  left: 10%;              // 左に固定
+  z-index: 999;
+  width: 30%;
+  height: 90%;
+  transition: .5s ease-in-out;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* スクロール時にロゴを左へ移動 */
+.logo-animation {
+  bottom: -12%;
+  left: 7%;
+}
+
+/* ヘッダーナビゲーション */
+#nav-header {
+  nav {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    z-index: 2000;
+    font-size: calc(80% + 0.5vw);
+    width: 93vw;
+    height: 36px;
+    transition: .5s ease-in-out;
+
+    ul {
+      list-style: none;
+      padding: .2em 2em;
+      float: right;
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: .2em .7em;
+      }
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .25s ease-in-out;
+      &:hover {
+        color: $my-color3;
+      }
+    }
+
+  }
+}
+
+/* ヘッダー背景 */
+.nav-bg {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -120%;
+  width: 100%;
+  height: 120%;
+  z-index: -1;
+  background: $my-color2;
+  transition: .4s ease-in-out;
+}
+
+/* ヘッダー背景の非表示 */
+.bg-hidden {
+  top: -120%;
+  opacity: 0;
+}
+
+/* ヘッダー背景の表示 */
+.bg-visible {
+  top: 0;
+  opacity: 1;
+}
+
+/*================================================
+ *  汎用クラス
+ ================================================*/
+
+ /* 写真中央寄せ */
+ .imgC {
+  clear:both;
+  overflow:hidden;
+  margin-bottom:50px;
+  text-align:center;
+img {
+  border-radius:5px;
+  margin-bottom:0.5em;
+}
+}
+
+/* 写真左寄せ */
+.imgL {
+  clear:both;
+overflow:hidden;
+margin-bottom:50px;
+img {
+  float:left;
+  margin:0 2em 2em 0;
+  border-radius:5px;
+}
+}
+
+/* 写真右寄せ */
+.imgR {
+  clear:both;
+overflow:hidden;
+margin-bottom:50px;
+img {
+  float:right;
+  margin:0 0 2em 2em;
+  border-radius:5px;
+}
+}
+
+/* 通常の領域 */
+.normal-area {
+width:100%;
+padding: 10px;
+}
+
+/* 背景画像を表示させない領域 */
+.non-background-area {
+width:100%;
+padding: 10px;
+background: $my-color2
+}
+
+/* 通常のブロック */
+.normal-block {
+margin: 50px;
+padding: 20px;
+}
+
+/* 背景が白いブロック */
+.white-block {
+margin: 50px;
+  padding: 50px;
+  border-radius: 10px;
+background: rgb(255, 255, 255);
+}

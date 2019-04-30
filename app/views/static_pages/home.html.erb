@@ -1,7 +1,55 @@
 <% provide(:title, "Home") %>
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+
+<div id="contents">
+
+  <!-- １番目のコンテンツ -->
+  <div class="down-appear-trigger">
+  <div class="normal-area down-appear">
+    <div class="normal-block">
+      <div class="imgR">
+        <%= image_tag "harry01.png", alt: "Harry" %>
+        <h1>ピコン！<br>とひらめく力！！</h1>
+        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ２番目のコンテンツ -->
+  <div class="up-appear-trigger">
+  <div class="non-background-area up-appear">
+    <div class="white-block block2">
+      <div class="imgR">
+        <%= image_tag "harry01.png", alt: "Harry" %>
+        <h1>ピコン！<br>とひらめく力！！</h1>
+        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ３番目のコンテンツ -->
+  <div class="left-slide-trigger">
+  <div class="normal-area left-slide">
+    <div class="normal-block">
+      <div class="imgL">
+        <%= image_tag "harry01.png", alt: "Harry" %>
+        <h1>ピコン！<br>とひらめく力！！</h1>
+        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！/p>
+      </div>  
+    </div>
+  </div>
+
+  <!-- ４番目のコンテンツ -->
+  <div class="right-slide-trigger">
+  <div class="normal-area right-slide">
+    <div class="normal-block">
+      <div class="imgL">
+        <%= image_tag "harry01.png", alt: "Harry" %>
+        <h1>ピコン！<br>とひらめく力！！</h1>
+        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
+      </div>  
+    </div>
+  </div>
+
+</div>
