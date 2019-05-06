@@ -290,37 +290,37 @@ aside {
   margin-top: 15px;
 }
 
-/*----------------------------------------------------------
-7章 リスト7．16
-ユーザー登録フォームのCSS
-----------------------------------------------------------*/
-/* forms */
+// /*----------------------------------------------------------
+// 7章 リスト7．16
+// ユーザー登録フォームのCSS
+// ----------------------------------------------------------*/
+// /* forms */
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
+// input, textarea, select, .uneditable-input {
+//   border: 1px solid #bbb;
+//   width: 100%;
+//   margin-bottom: 15px;
+//   @include box_sizing;
+// }
 
-input {
-  height: auto !important;
-}
+// input {
+//   height: auto !important;
+// }
 
-/* リスト９．２２で追加*/
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
+// /* リスト９．２２で追加*/
+// .checkbox {
+//   margin-top: -10px;
+//   margin-bottom: 10px;
+//   span {
+//     margin-left: 20px;
+//     font-weight: normal;
+//   }
+// }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
+// #session_remember_me {
+//   width: auto;
+//   margin-left: 0;
+// }
 
 /*----------------------------------------------------------
 7章 リスト7．22
@@ -338,5 +338,22 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+/*----------------------------------------------------------
+10章 リスト10.39
+ユーザーのindexページ用のCSS
+----------------------------------------------------------*/
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
   }
 }

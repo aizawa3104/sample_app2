@@ -1,0 +1,33 @@
+@import "./custom.scss";
+
+/*================================================
+ *  ドロップダウンメニュー
+ ================================================*/
+
+ ul.menu li {
+    position: relative;
+    display: block;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .25s ease-in-out;
+    &:hover {
+      color: $my-color3;
+    }
+  }
+  ul.sub {
+    position: absolute;
+    margin-left: -3rem;
+    transition: .75s ease-in-out;  
+  }
+  
+  /* ヘッダー背景がない場合はサブメニュー背景も透明 */
+  .sub-bgHidden {
+    background-color: transparent;
+  }
+  
+  /* ヘッダー背景がある場合はサブメニューの背景あり */
+  .sub-bgVisible {
+    background-color: $my-color2;
+  }
+  
