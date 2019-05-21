@@ -9,6 +9,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    # カーシェア
+    @cars = @user.car.paginate(page: params[:page], per_page: 8)   # 記事一覧用変数
+    @car = current_user.car.build if logged_in?       # 記事投稿用空インスタンス変数
+
+    #現在のURLを記憶
+    before_location user_path
   end
 
   def new
@@ -54,15 +60,6 @@ class UsersController < ApplicationController
     end
 
     # beforeアクション
-
-    # ログイン済みユーザーかどうか確認
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
 
     # 正しいユーザーかどうか確認
     def correct_user

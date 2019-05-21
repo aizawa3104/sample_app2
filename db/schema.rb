@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190506145534) do
+ActiveRecord::Schema.define(version: 20190521013136) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "field"
+    t.string "carmodel"
+    t.string "carsize"
+    t.string "other"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture"
+    t.index ["user_id", "created_at"], name: "index_cars_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_cars_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
