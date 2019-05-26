@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :logged_in_user, only: [:contact]
+
   def home
   end
 
@@ -9,6 +11,8 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    #現在のURLを記憶
+    before_location contact_path
   end
 
   def carshare

@@ -6,6 +6,10 @@
     <%= link_to "戻 る", redirect_before_url, class: "detail_btn" %>
     <!--修正ボタン-->
     <%= link_to "編 集", edit_car_path(@car), class: "detail_btn" %>
+    <!--予約ボタン-->
+    <% if logged_in? %>
+      <%= link_to "予約する", contact_path, class: "detail_btn" %>
+    <% end %>
     <!--削除ボタン-->
     <%= link_to "削 除", @car, method: :delete, data: { confirm: "You sure?" }, class: "detail_btn" %>
   </div>
